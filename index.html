@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="Aayush's birthday story photo gallery. Pick a photo and make the story.">
+  <title>Aayush • Birthday Story Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="grain"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Back to top">A<span>.</span></a>
+    <nav>
+      <a href="#gallery">Photos</a>
+      <a href="#how">How it works</a>
+    </nav>
+    <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">☾</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p style="color: rgb(95, 93, 91);"><em>Ha.....aaj mera birthday h😊</em></p>
+      <div class="eyebrow"><span></span> 08 OCTOBER 2026 <span></span></div>
+      <h1>Pick a photo.<br><em>Make my story.</em></h1>
+      <p class="hero-copy">
+        Need a picture for my birthday story? Don't ask me for one.
+        Just browse, pick your favourite, and you're ready. 🎂
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-dark" href="#gallery">Browse photos <span>↓</span></a>
+        <button class="btn btn-light" id="randomBtn">Surprise me <span>✦</span></button>
+      </div>
+      <div class="hero-note">46 story-ready portraits · made for mobile</div>
+    </section>
+
+    <section class="how" id="how">
+      <div><b>01</b><span>Browse</span></div>
+      <div><b>02</b><span>Pick your favourite</span></div>
+      <div><b>03</b><span>Save & post</span></div>
+    </section>
+
+    <section class="gallery-section" id="gallery">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow left">THE GALLERY</p>
+          <h2>Choose <em>your</em> one.</h2>
+        </div>
+        <div class="gallery-tools">
+          <button class="filter-btn active" data-filter="all">All <span>46</span></button>
+          <button class="filter-btn" data-filter="favourites">♥ <span id="favCount">0</span></button>
+        </div>
+      </div>
+
+      <div class="gallery" id="galleryGrid"></div>
+      <p class="empty-state" id="emptyState">No favourites yet. Your heart button is waiting. ♡</p>
+    </section>
+
+    <section class="closing">
+      <p class="eyebrow">ONE SMALL REQUEST</p>
+      <h2>Mera din special bnane ke liye<br>Ek wish hi kafi h😄. <br><em>Stories ya formalities ka need nhi✨.</em></h2>
+      <p>Thanks for being part of my day. 🤍</p>
+      <a class="btn btn-dark" href="#gallery">Pick another photo ↑</a>
+    </section>
+  </main>
+
+  <footer>
+    <div><strong>AAYUSH<span>.</span></strong><small>Birthday Archive · 2026</small></div>
+    <button id="topBtn">Back to top ↑</button>
+  </footer>
+
+  <div class="viewer" id="viewer" aria-hidden="true">
+    <button class="viewer-close" id="viewerClose" aria-label="Close">×</button>
+    <button class="viewer-arrow prev" id="prevBtn" aria-label="Previous photo">‹</button>
+
+    <div class="viewer-inner">
+      <div class="viewer-photo" id="viewerPhoto">
+        <div class="viewer-placeholder">
+          <span id="viewerLabel">IMAGE 01</span>
+          <small>Add your image to images/photo-01.jpg</small>
+        </div>
+      </div>
+      <div class="viewer-meta">
+        <div>
+          <small>PHOTO</small>
+          <strong id="viewerNumber">01</strong>
+        </div>
+        <div class="viewer-actions">
+          <button class="round-btn" id="viewerFav" aria-label="Favourite">♡</button>
+          <button class="round-btn" id="shareBtn" aria-label="Share">↗</button>
+          <button class="save-btn" id="saveBtn">Save photo ↓</button>
+        </div>
+      </div>
+      <div class="viewer-progress"><span id="progressBar"></span></div>
+    </div>
+
+    <button class="viewer-arrow next" id="nextBtn" aria-label="Next photo">›</button>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>
